@@ -13,23 +13,22 @@ module.exports = function(grunt) {
         cssmin: {
             all: {
                 files: {
-                    'assets/dist/all.min.css': [
-                        'assets/lib_css/jquery-ui.css',
-                        'assets/lib_css/bootstrap.css',
-                        'assets/lib_css/select2.css',
-                        'assets/lib_css/select2-bootstrap.css',
-                        'assets/css/style.css'
+                    'app/assets/dist/all.min.css': [
+                        'app/assets/lib_css/jquery-ui.css',
+                        'app/assets/lib_css/bootstrap.css',
+                        'app/assets/lib_css/select2.css',
+                        'app/assets/lib_css/select2-bootstrap.css',
+                        'app/assets/css/style.css'
                     ]
                 }
             }
         },
-        // handlebarsは読み込む順番が自由なので、ワイルドカード使う
         handlebars: {
             all: {
                 options: hbsOptions,
                 files: {
-                    'assets/js/template.js': [
-                        hbsPath + '*.hbs'
+                    'app/assets/js/template.js': [
+                        'app/assets/hbs/*.hbs'
                     ]
                 }
             }
@@ -37,20 +36,20 @@ module.exports = function(grunt) {
         concat: {
             all: {
                 files: {
-                    'assets/dist/all.js': [
-                        'assets/lib_js/jquery.min.js',
-                        'assets/lib_js/jquery-ui.min.js',
-                        'assets/lib_js/bootstrap.js',
-                        'assets/lib_js/parsley.min.js',
-                        'assets/lib_js/handlebars.runtime-v1.3.0.js',
-                        'assets/lib_js/lodash.underscore.min.js',
-                        'assets/lib_js/backbone.js',
-                        'assets/lib_js/backbone.queryparams.js',
-                        'assets/lib_js/backbone-nested.js',
-                        'assets/lib_js/purl.js',
-                        'assets/lib_js/select2.min.js',
-                        'assets/lib_js/moment-with-langs.min.js',
-                        'assets/lib_js/cache.js'
+                    'app/assets/dist/all.js': [
+                        'app/assets/lib_js/jquery.min.js',
+                        'app/assets/lib_js/jquery-ui.min.js',
+                        'app/assets/lib_js/lodash.underscore.min.js',
+                        'app/assets/lib_js/backbone.js',
+                        'app/assets/lib_js/backbone.queryparams.js',
+                        'app/assets/lib_js/backbone-nested.js',
+                        'app/assets/lib_js/bootstrap.js',
+                        'app/assets/lib_js/handlebars.runtime-v1.3.0.js',
+                        'app/assets/lib_js/moment-with-langs.min.js',
+                        'app/assets/lib_js/select2.min.js',
+                        'app/assets/lib_js/parsley.min.js',
+                        'app/assets/lib_js/purl.js',
+                        'app/assets/lib_js/cache.js'
                     ]
                 }
             }
@@ -58,23 +57,23 @@ module.exports = function(grunt) {
         uglify: {
             all: {
                 files: {
-                    'assets/dist/all.min.js': [
-                        'assets/dist/all.js'
+                    'app/assets/dist/all.min.js': [
+                        'app/assets/dist/all.js'
                     ]
                 }
             }
         },
         watch: {
             handlebars: {
-                files: ["assets/hbs/*.hbs"],
+                files: ["app/assets/hbs/*.hbs"],
                 tasks: ["handlebars"]
             },
             concat: {
-                files: ["assets/js/*.js"],
+                files: ["app/assets/js/*.js"],
                 tasks: ["concat"]
             },
             cssmin: {
-                files: ['assets/css/style.css'],
+                files: ['app/assets/css/style.css'],
                 tasks: ["cssmin"]
             }
         },
@@ -82,7 +81,7 @@ module.exports = function(grunt) {
             options: {
                 jshintrc: true
             },
-            all: ['assets/js/*.js']
+            all: ['app/assets/js/*.js']
         }
     });
 
