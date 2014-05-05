@@ -1,0 +1,10 @@
+<div class="clearfix">
+    <small>Group name : </small>{{name}}, <small>Server name : </small>{{serverName}}
+    <div class="pull-right">
+        <select name="server" class="form-control input-sm">
+{{#each servers}}
+            <option value="{{this.value}}" {{this.selected}}>{{this.value}}</option>
+{{/each}}
+        </select>
+    </div>
+</div>

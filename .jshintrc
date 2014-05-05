@@ -15,6 +15,6 @@
     "node": true,
     "jquery": true,
     "predef": [
-        "App", "_", "Backbone", "module", "moment", "Handlebars", "Cache"
+        "App", "_", "Backbone", "module", "moment", "Handlebars", "Cache", "purl"
     ]
 }

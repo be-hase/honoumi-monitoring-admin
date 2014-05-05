@@ -1,0 +1,88 @@
+<div class="clearfix some-action-wrap">
+    <div class="pull-left">
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".add-query-modal">Add query</button>
+    </div>
+    <div class="pull-right">
+        <button class="btn btn-danger btn-xs start-all-btn">Start All</button>
+        <button class="btn btn-danger btn-xs stop-all-btn">Stop All</button>
+        <button class="btn btn-danger btn-xs delete-all-btn">Delete All</button>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Queries</div>
+    <div class="panel-body">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-head">
+                    <th>Name</th>
+                    <th>Statement</th>
+                    <th>Store count</th>
+                    <th>Max store count</th>
+                    <th>status</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+{{#each queries}}
+                <tr class="table-data">
+                    <td>{{this.name}}</td>
+                    <td>{{this.text}}</td>
+                    <td>{{this.storeCount}}</td>
+                    <td>{{this.maxStoreCountDisplay}}</td>
+                    <td>{{this.status}}</td>
+                    <td>
+                        <a href="#monitor/{{../groupName}}/queries/{{this.name}}" class="btn btn-primary btn-xs">View result</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn-xs change-status-btn">{{this.changeStatusDisplay}}</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger btn-xs delete-btn">Delete</button>
+                    </td>
+                </tr>
+{{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade add-query-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Add query</h4>
+            </div>
+            <div class="modal-body">
+                <div role="form">
+                    <div class="form-group">
+                        <label>Query name.</label>
+                        <input type="text" name="queryName" class="form-control" placeholder="Enter query name" maxlength="20" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            Query statement.
+                        </label>
+                        <textarea name="query" class="form-control enable-tab" rows="5" placeholder="Enter query statement"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Max store count.</label>
+                        <input type="text" name="maxStoreCount" class="form-control" placeholder="Enter max store count" maxlength="10" value="">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="status" value="on"> auto start (Start at the same time created.)
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary add-query-btn">Send</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

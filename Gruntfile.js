@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 files: {
                     'app/assets/dist/all.min.css': [
                         'app/assets/lib_css/jquery-ui.css',
-                        'app/assets/lib_css/bootstrap.css',
+                        'app/assets/lib_css/bootstrap.superhero.css',
                         'app/assets/lib_css/select2.css',
                         'app/assets/lib_css/select2-bootstrap.css',
                         'app/assets/css/style.css'
@@ -49,7 +49,16 @@ module.exports = function(grunt) {
                         'app/assets/lib_js/select2.min.js',
                         'app/assets/lib_js/parsley.min.js',
                         'app/assets/lib_js/purl.js',
-                        'app/assets/lib_js/cache.js'
+                        'app/assets/lib_js/cache.js',
+                        'app/assets/js/namespace.js',
+                        'app/assets/js/util.js',
+                        'app/assets/js/mixin.js',
+                        'app/assets/js/template.js',
+                        'app/assets/js/model.js',
+                        'app/assets/js/collection.js',
+                        'app/assets/js/view.js',
+                        'app/assets/js/router.js',
+                        'app/assets/js/app.js'
                     ]
                 }
             }

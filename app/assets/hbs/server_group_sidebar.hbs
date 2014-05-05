@@ -1,0 +1,10 @@
+<div class="list-group">
+    <a href="#server_group" class="list-group-item {{addActive}}">Add new group</a>
+</div>
+
+<p>Server group list</p>
+<div class="list-group">
+{{#each serverGroups}}
+    <a href="#server_group/{{this.name}}" class="list-group-item {{this.active}}">{{this.name}}</a>
+{{/each}}
+</div>

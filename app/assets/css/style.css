@@ -1,0 +1,66 @@
+body {
+    padding-top: 55px;
+}
+table {
+    border-collapse: inherit;
+}
+a.btn {
+    text-decoration: none;
+}
+.alert-wrap {
+    position: absolute;
+    width: 96%;
+    top: 2%;
+    left: 2%;
+    z-index: 100000;
+}
+.alert-wrap .alert{
+    display: none;
+}
+.header .now-loading {
+    width: 25px;
+    margin-top: 7px;
+    margin-left: 5px;
+    display: none;
+}
+.page-name {
+    margin-top: 5px;
+    font-size: 22px;
+}
+.page-name .clearfix .pull-right {
+    margin-top: -8px;
+}
+.some-action-wrap {
+    margin-bottom: 10px;
+}
+
+/* table */
+.panel-body .table .table-head th {
+    border-bottom: 2px solid #2b3e50;
+}
+.panel-body .table .table-data td {
+    border-bottom: 1px solid #2b3e50;
+}
+.panel-body .table .table-data:last-child td {
+    border-bottom: 0;
+}
+.table-wrap {
+    overflow-x: scroll;
+}
+
+
+/* status main view */
+.status-main-view .property-name {
+    text-align: left;
+}
+.status-main-view .table dl {
+    margin-bottom: 3px;
+}
+
+
+/* queries main view */
+.queries-main-view .action-wrap {
+    right: 0;
+    left: auto;
+}
+

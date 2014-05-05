@@ -1,0 +1,60 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Query</div>
+    <div class="panel-body">
+        <table class="table table-hover">
+            <thead>
+                <tr class="table-head">
+                    <th>Name</th>
+                    <th>Statement</th>
+                    <th>Store count</th>
+                    <th>Max store count</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-data">
+                    <td>{{name}}</td>
+                    <td>{{text}}</td>
+                    <td>{{storeCount}}</td>
+                    <td>{{maxStoreCountDisplay}}</td>
+                    <td>{{status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="clearfix some-action-wrap">
+    <div class="pull-left">
+    </div>
+    <div class="pull-right">
+        <button class="btn btn-primary btn-xs export-csv-btn">export CSV</button>
+        <button class="btn btn-primary btn-xs export-excel-btn">export Excel</button>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Query Results</div>
+    <div class="panel-body">
+        <div class="table-wrap">
+            <table class="table table-hover query-results-table">
+                <thead>
+                    <tr class="table-head">
+    {{#each resultsKeys}}
+                        <th>{{this}}</th>
+    {{/each}}
+                    </tr>
+                </thead>
+                <tbody>
+{{#each resultsArrays}}
+                    <tr class="table-data">
+        {{#each this}}
+                        <td>{{this}}</td>
+        {{/each}}
+                    </tr>
+{{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
