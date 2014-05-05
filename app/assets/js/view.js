@@ -316,6 +316,10 @@ App.Views.QueriesMain = App.Views.Base.extend({
         index = _this.$('.delete-btn').index($clicked);
         query = _this.collection.at(index);
 
+        if (!window.confirm('Are you sure ?')) {
+            return;
+        }
+
         $clicked.button('loading');
         query.deleteQuery(
             function() {
@@ -407,6 +411,10 @@ App.Views.QueriesMain = App.Views.Base.extend({
         var _this, $clicked;
         _this = this;
         $clicked = $(event.currentTarget);
+
+        if (!window.confirm('Are you sure ?')) {
+            return;
+        }
 
         $clicked.button('loading');
         _this.collection.deleteAll(

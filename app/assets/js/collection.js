@@ -121,9 +121,7 @@ App.Collections.Queries = App.Collections.Base.extend({
             url: apiUrl,
             success: function(data) {
                 App.Caches.http.removeItem(_this.server + '/monitor/' + _this.serverName + '/status');
-                _this.reset(_.map(data, function(value){
-                    return new App.Models.Query(value);
-                }), options);
+                _this.reset([], options);
                 success(data);
             },
             complete: complete

@@ -6333,9 +6333,7 @@ App.Collections.Queries = App.Collections.Base.extend({
             url: apiUrl,
             success: function(data) {
                 App.Caches.http.removeItem(_this.server + '/monitor/' + _this.serverName + '/status');
-                _this.reset(_.map(data, function(value){
-                    return new App.Models.Query(value);
-                }), options);
+                _this.reset([], options);
                 success(data);
             },
             complete: complete
@@ -6662,6 +6660,10 @@ App.Views.QueriesMain = App.Views.Base.extend({
         index = _this.$('.delete-btn').index($clicked);
         query = _this.collection.at(index);
 
+        if (!window.confirm('Are you sure ?')) {
+            return;
+        }
+
         $clicked.button('loading');
         query.deleteQuery(
             function() {
@@ -6753,6 +6755,10 @@ App.Views.QueriesMain = App.Views.Base.extend({
         var _this, $clicked;
         _this = this;
         $clicked = $(event.currentTarget);
+
+        if (!window.confirm('Are you sure ?')) {
+            return;
+        }
 
         $clicked.button('loading');
         _this.collection.deleteAll(
