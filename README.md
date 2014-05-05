@@ -22,3 +22,14 @@ Of course, you can place on the server. Please use freely.
 
 ## Screenshot
 
+### select(regist) group
+![select group](https://raw.githubusercontent.com/be-hase/honoumi-monitoring-admin/master/docs/img/select_group.png)
+
+### status
+![status](https://raw.githubusercontent.com/be-hase/honoumi-monitoring-admin/master/docs/img/status.png)
+
+### queries
+![queries](https://raw.githubusercontent.com/be-hase/honoumi-monitoring-admin/master/docs/img/queries.png)
+
+### query results
+![query results](https://raw.githubusercontent.com/be-hase/honoumi-monitoring-admin/master/docs/img/query_results.png)
