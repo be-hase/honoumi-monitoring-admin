@@ -1,7 +1,7 @@
 {
-    "name": "BIP",
+    "name": "honoumi-monitoring-admin",
     "version": "0.0.0",
-    "description": "BIP's package.json",
+    "description": "honoumi-monitoring-admin's package.json",
     "author": "Ryosuke Hasebe",
     "devDependencies": {
         "grunt": "~0.4.2",
